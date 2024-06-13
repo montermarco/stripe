@@ -11,7 +11,7 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: import.meta.env.VITE_API_URL,
 });
 
 const authLink = setContext((_, { headers }) => {
